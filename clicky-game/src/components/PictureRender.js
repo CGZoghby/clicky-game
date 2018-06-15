@@ -11,11 +11,11 @@ const styles = {
 //moving them around.
 const RendPic = (props) => (
     <div className="col-md-3">
-        <span onClick={() => props.clickPic()}>
+        {/* <span onClick={() => props.clickPic()}> */}
             <div className="img-container">
                 <img id={props.id} alt={props.alt} src={props.src} data-isclicked={props.isclicked} style={styles.imgStyle} />
             </div>
-        </span>
+        {/* </span> */}
     </div>
 );
 

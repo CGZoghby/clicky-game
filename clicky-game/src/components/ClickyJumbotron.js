@@ -1,5 +1,6 @@
 import React from "react"
 
+//Bootstrap jumbotron, has fun texture/backgroun, and introduces the game and explains rules.
 const HeroUnit = () => (
     <div className="jumbotron jumbotron-fluid text-center">
         <div className="container">

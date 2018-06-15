@@ -1,50 +1,22 @@
 import React from "react";
 
-const RendPics = () => (
-    <div className="container">
-        <div className="row">
-            <div className="col-md-3">
-                <a href="https://placeholder.com"><img src="http://via.placeholder.com/140x100" /></a>
-            </div>
-            <div className="col-md-3">
-                <a href="https://placeholder.com"><img src="http://via.placeholder.com/140x100" /></a>
-            </div>
-            <div className="col-md-3">
-                <a href="https://placeholder.com"><img src="http://via.placeholder.com/140x100" /></a>
-            </div>
-            <div className="col-md-3">
-                <a href="https://placeholder.com"><img src="http://via.placeholder.com/140x100" /></a>
-            </div>
-        </div>
-        <div className="row">
-            <div className="col-md-3">
-                <a href="https://placeholder.com"><img src="http://via.placeholder.com/140x100" /></a>
-            </div>
-            <div className="col-md-3">
-                <a href="https://placeholder.com"><img src="http://via.placeholder.com/140x100" /></a>
-            </div>
-            <div className="col-md-3">
-                <a href="https://placeholder.com"><img src="http://via.placeholder.com/140x100" /></a>
-            </div>
-            <div className="col-md-3">
-                <a href="https://placeholder.com"><img src="http://via.placeholder.com/140x100" /></a>
-            </div>
-        </div>
-        <div className="row">
-            <div className="col-md-3">
-                <a href="https://placeholder.com"><img src="http://via.placeholder.com/140x100" /></a>
-            </div>
-            <div className="col-md-3">
-                <a href="https://placeholder.com"><img src="http://via.placeholder.com/140x100" /></a>
-            </div>
-            <div className="col-md-3">
-                <a href="https://placeholder.com"><img src="http://via.placeholder.com/140x100" /></a>
-            </div>
-            <div className="col-md-3">
-                <a href="https://placeholder.com"><img src="http://via.placeholder.com/140x100" /></a>
-            </div>
-        </div>
-    </div>
-)
+const styles = {
+    imgStyle: {
+        padding: 10
+    }
+}
 
-export default RendPics;
+//Literally the whole goal of this is to display the pictures. Sometime down the line, this will take props, which is how the pictures will be reshuffled?
+//So, now we render pictures from a JSON containing all of their data, on click we would set the data-attr value to true, and shuffle the board by targeting the pictures by id and 
+//moving them around.
+const RendPic = (props) => (
+    <div className="col-md-3">
+        <span onClick={() => props.clickPic()}>
+            <div className="img-container">
+                <img id={props.id} alt={props.alt} src={props.src} data-isClicked={props.isClicked} style={styles.imgStyle} />
+            </div>
+        </span>
+    </div>
+);
+
+export default RendPic;

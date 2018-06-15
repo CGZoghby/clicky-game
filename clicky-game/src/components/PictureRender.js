@@ -13,7 +13,7 @@ const RendPic = (props) => (
     <div className="col-md-3">
         <span onClick={() => props.clickPic()}>
             <div className="img-container">
-                <img id={props.id} alt={props.alt} src={props.src} data-isClicked={props.isClicked} style={styles.imgStyle} />
+                <img id={props.id} alt={props.alt} src={props.src} data-isclicked={props.isclicked} style={styles.imgStyle} />
             </div>
         </span>
     </div>

@@ -10,9 +10,9 @@ class App extends Component {
     photos
   };
 
-  clickPic = (event) => {
+  /* clickPic = (event) => {
     console.log(JSON.stringify(event.children.isclicked));
-  }
+  } */
 
   render() {
     return (
@@ -22,7 +22,7 @@ class App extends Component {
         <div className="row">
           {this.state.photos.map(photo => (
             <RendPic
-              clickPic={this.clickPic}
+              /* clickPic={this.clickPic} */
               key={photo.id}
               id={photo.id}
               alt={photo.alt}

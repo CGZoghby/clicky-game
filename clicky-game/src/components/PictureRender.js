@@ -1,4 +1,5 @@
 import React from "react";
+import photos from "../pictures.json"
 
 const styles = {
     imgStyle: {
@@ -6,12 +7,10 @@ const styles = {
     }
 }
 
-//Literally the whole goal of this is to display the pictures. Sometime down the line, this will take props, which is how the pictures will be reshuffled?
-//So, now we render pictures from a JSON containing all of their data, on click we would set the data-attr value to true, and shuffle the board by targeting the pictures by id and 
-//moving them around.
+//Literally the whole goal of this is to display the pictures.
 const RendPic = (props) => (
     <div className="col-md-3">
-        <span onClick={() => props.onClick()}>
+        <span onClick={() => props.onClick(photos[props.id])}>
             <div className="img-container">
                 <img id={props.id} alt={props.alt} src={props.src} style={styles.imgStyle} />
             </div>

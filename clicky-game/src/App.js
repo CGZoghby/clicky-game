@@ -59,7 +59,6 @@ class App extends Component {
           <div className="row">
             {this.state.photos.map(photo => (
               <ClickyStatusPictures
-                onClick={() => this.onClick()}
                 key={photo.id}
                 id={photo.id}
                 alt={photo.alt}
